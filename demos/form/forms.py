@@ -26,7 +26,7 @@ class FortyTwoForm(FlaskForm):
     answer = IntegerField('The Number')
     submit = SubmitField()
 
-    def validate_answer(form, field):
+    def validate_answer(self, field):
         if field.data != 42:
             raise ValidationError('Must be 42.')
 
